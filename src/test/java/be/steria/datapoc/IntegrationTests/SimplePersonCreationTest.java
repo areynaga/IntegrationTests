@@ -7,6 +7,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import be.steria.datapoc.IntegrationTests.tools.PersonTestTools;
+import be.steria.datapoc.IntegrationTests.tools.TestScenario;
+import be.steria.datapoc.IntegrationTests.tools.TestTools;
 import be.steria.datapoc.client.Address;
 import be.steria.datapoc.client.CreatePersonRequest;
 import be.steria.datapoc.client.Person;
@@ -14,7 +17,7 @@ import be.steria.datapoc.client.PersonService;
 
 
 
-public class SimplePersonCreation {
+public class SimplePersonCreationTest {
 
 	private TestScenario testScenario;
 	

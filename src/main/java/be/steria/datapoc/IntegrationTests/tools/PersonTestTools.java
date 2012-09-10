@@ -1,4 +1,4 @@
-package be.steria.datapoc.IntegrationTests;
+package be.steria.datapoc.IntegrationTests.tools;
 
 import junit.framework.Assert;
 

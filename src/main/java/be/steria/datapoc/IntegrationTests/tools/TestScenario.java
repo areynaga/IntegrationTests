@@ -1,4 +1,4 @@
-package be.steria.datapoc.IntegrationTests;
+package be.steria.datapoc.IntegrationTests.tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -53,10 +53,13 @@ public class TestScenario {
 			TestTools.setNodeId(startPort+i, i);
 			TestTools.startCamelRoutes(startPort+i);
 		}
+		
 	}
 	
 	public void mountScenario() throws Exception {
 		startServers();
+
+		
 		configureServers();
 		
 		
@@ -67,18 +70,23 @@ public class TestScenario {
 		return serverId + startPort;
 	}
 	
-	private void deleteTestFolders() throws IOException {
+	public  void deleteTestFolders() throws IOException {
 		FileUtils.deleteDirectory(new File("./activemq-data"));
 		FileUtils.deleteDirectory(new File("./temp"));
+		System.out.println("Deleted folders");
+	}
+	
+	public void stopJettyServers() throws Exception {
+		for (Server server : jettyServers) {
+			server.stop();
+			server.destroy();
+		}
 	}
 	
 	
 	public void unMountScenario() throws Exception {
 		
-		for (Server server : jettyServers) {
-			server.stop();
-			server.destroy();
-		}
+		stopJettyServers();
 		
 		activeMQServer.stop();
 		deleteTestFolders();

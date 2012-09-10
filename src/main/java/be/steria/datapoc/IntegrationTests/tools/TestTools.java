@@ -1,4 +1,4 @@
-package be.steria.datapoc.IntegrationTests;
+package be.steria.datapoc.IntegrationTests.tools;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -19,6 +19,7 @@ import be.steria.datapoc.client.QueryPersons;
 import be.steria.datapoc.client.QueryPersonsService;
 import be.steria.datapoc.services.NodeControler;
 import be.steria.datapoc.services.NodeInfoService;
+
 
 
 public class TestTools {

@@ -1,0 +1,1 @@
+mvn exec:java -Dexec.mainClass="be.steria.datapoc.IntegrationTests.tools.StopScenario" -Dexec.args="%1"
