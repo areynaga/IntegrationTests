@@ -73,7 +73,7 @@ public class TestScenario {
 	public  void deleteTestFolders() throws IOException {
 		FileUtils.deleteDirectory(new File("./activemq-data"));
 		FileUtils.deleteDirectory(new File("./temp"));
-		System.out.println("Deleted folders");
+		System.out.println("Temp folders deleted");
 	}
 	
 	public void stopJettyServers() throws Exception {
